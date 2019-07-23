@@ -51,7 +51,7 @@ function build () {
     console.log(`\n\n${results}`)
     console.log(`${okayLog}take it away ${chalk.yellow('`electron-{{builder}}`')}\n`)
     {{#if_eq builder 'packager'}}bundleApp(){{else}}process.exit(){{/if_eq}}
-  })
+    })
 
   pack(mainConfig).then(result => {
     results += result + '\n\n'
@@ -83,13 +83,13 @@ function pack (config) {
         let err = ''
 
         stats.toString({
-          chunks: false,
-          colors: true
-        })
-        .split(/\r?\n/)
-        .forEach(line => {
-          err += `    ${line}\n`
-        })
+              chunks: false,
+              colors: true
+            })
+            .split(/\r?\n/)
+            .forEach(line => {
+              err += `    ${line}\n`
+            })
 
         reject(err)
       } else {
@@ -116,35 +116,35 @@ function bundleApp () {
 }
 
 {{/if_eq}}
-function web () {
-  del.sync(['dist/web/*', '!.gitkeep'])
-  webConfig.mode = 'production'
-  webpack(webConfig, (err, stats) => {
-    if (err || stats.hasErrors()) console.log(err)
+  function web () {
+    del.sync(['dist/web/*', '!.gitkeep'])
+    webConfig.mode = 'production'
+    webpack(webConfig, (err, stats) => {
+      if (err || stats.hasErrors()) console.log(err)
 
-    console.log(stats.toString({
-      chunks: false,
-      colors: true
-    }))
+      console.log(stats.toString({
+        chunks: false,
+        colors: true
+      }))
 
-    process.exit()
-  })
-}
-
-function greeting () {
-  const cols = process.stdout.columns
-  let text = ''
-
-  if (cols > 85) text = 'lets-build'
-  else if (cols > 60) text = 'lets-|build'
-  else text = false
-
-  if (text && !isCI) {
-    say(text, {
-      colors: ['yellow'],
-      font: 'simple3d',
-      space: false
+      process.exit()
     })
-  } else console.log(chalk.yellow.bold('\n  lets-build'))
-  console.log()
-}
+  }
+
+  function greeting () {
+    const cols = process.stdout.columns
+    let text = ''
+
+    if (cols > 85) text = 'lets-build'
+    else if (cols > 60) text = 'lets-|build'
+    else text = false
+
+    if (text && !isCI) {
+      say(text, {
+        colors: ['yellow'],
+        font: 'simple3d',
+        space: false
+      })
+    } else console.log(chalk.yellow.bold('\n  lets-build'))
+    console.log()
+  }

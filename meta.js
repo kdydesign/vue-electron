@@ -1,8 +1,8 @@
 'use strict'
 
-const { join } = require('path')
-const { readFileSync, writeFileSync } = require('fs')
-const { get } = require('https')
+const {join} = require('path')
+const {readFileSync, writeFileSync} = require('fs')
+const {get} = require('https')
 
 function getCurrentSHA (author) {
   return new Promise((resolve, reject) => {
@@ -39,8 +39,8 @@ function appendSHALink (sha, destDirName) {
   let readmePath = join(destDirName, '/README.md')
   let md = readFileSync(readmePath, 'utf8')
   md = md.replace(
-    ' using',
-    `@[${sha.substring(0, 7)}](https://github.com/SimulatedGREG/electron-vue/tree/${sha}) using`
+      ' using',
+      `@[${sha.substring(0, 7)}](https://github.com/SimulatedGREG/electron-vue/tree/${sha}) using`
   )
   writeFileSync(readmePath, md, 'utf8')
 }
@@ -54,16 +54,16 @@ module.exports = {
       default: 'your-app'
     },
     appid: {
-        type: 'string',
-        required: true,
-        message: 'Application Id',
-        default: 'com.example.yourapp'
+      type: 'string',
+      required: true,
+      message: 'Application Id',
+      default: 'com.example.yourapp'
     },
     appver: {
-        type: 'string',
-        required: true,
-        message: 'Application Version',
-        default: '0.0.1'
+      type: 'string',
+      required: true,
+      message: 'Application Version',
+      default: '0.0.1'
     },
     description: {
       type: 'string',
@@ -71,10 +71,23 @@ module.exports = {
       message: 'Project description',
       default: 'An electron-vue project'
     },
-    usesass: {
-        type: 'confirm',
-        message: 'Use Sass / Scss?',
-        required: true
+    csspreprocessor: {
+      type: 'list',
+      message: 'Select CSS Pre-Processor',
+      choices: [
+        {
+          name: 'Sass',
+          value: 'sass'
+        },
+        {
+          name: 'Less',
+          value: 'less'
+        },
+        {
+          name: 'Stylus',
+          value: 'stylus'
+        }
+      ],
     },
     plugins: {
       type: 'checkbox',
@@ -145,11 +158,11 @@ module.exports = {
     deps (plugins) {
       let output = ''
       let dependencies = {
-        'axios': '^0.18.0',
+        'axios': '^0.19.0',
         'vue-electron': '^1.0.6',
         'vue-router': '^3.0.1',
-        'vuex': '^3.0.1',
-        'vuex-electron': '^1.0.0'
+        'vuex': '^3.1.1',
+        'vuex-electron': '^1.0.3'
       }
 
       if (Object.keys(plugins).length > 0) output += ',\n'

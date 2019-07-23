@@ -18,81 +18,86 @@ let webConfig = {
   },
   module: {
     rules: [
-{{#if eslint}}
-      {
-        test: /\.(js|vue)$/,
-        enforce: 'pre',
-        exclude: /node_modules/,
-        use: {
-          loader: 'eslint-loader',
-          options: {
-            formatter: require('eslint-friendly-formatter')
+      {{#if eslint}}
+        {
+          test: /\.(js|vue)$/,
+          enforce: 'pre',
+          exclude: /node_modules/,
+          use: {
+            loader: 'eslint-loader',
+            options: {
+              formatter: require('eslint-friendly-formatter')
+            }
           }
-        }
-      },
-{{/if}}
-    {{#if usesass}}
-      {
-        test: /\.scss$/,
-        use: ['vue-style-loader', 'css-loader', 'sass-loader']
-      },
-      {
-        test: /\.sass$/,
-        use: ['vue-style-loader', 'css-loader', 'sass-loader?indentedSyntax']
-      },
-    {{/if}}
-      {
-        test: /\.less$/,
-        use: ['vue-style-loader', 'css-loader', 'less-loader']
-      },
-      {
-        test: /\.css$/,
-        use: ['vue-style-loader', 'css-loader']
-      },
-      {
-        test: /\.html$/,
-        use: 'vue-html-loader'
-      },
-      {
-        test: /\.js$/,
-        use: 'babel-loader',
-        include: [ path.resolve(__dirname, '../src/renderer') ],
-        exclude: /node_modules/
-      },
-      {
-        test: /\.vue$/,
-        use: {
-          loader: 'vue-loader',
-          options: {
-            extractCSS: true,
-            loaders: {
-              sass: 'vue-style-loader!css-loader!sass-loader?indentedSyntax=1',
-              scss: 'vue-style-loader!css-loader!sass-loader',
-              less: 'vue-style-loader!css-loader!less-loader'
+        },
+      {{/if}}
+      {{#if_eq csspreprocessor 'sass'}}
+        {
+          test: /\.scss$/,
+          use: ['vue-style-loader', 'css-loader', 'sass-loader']
+        },
+        {
+          test: /\.sass$/,
+          use: ['vue-style-loader', 'css-loader', 'sass-loader?indentedSyntax']
+        },
+      {{/if_eq}}
+      {{#if_eq csspreprocessor 'less'}}
+        {
+          test: /\.less$/,
+          use: ['vue-style-loader', 'css-loader', 'less-loader']
+        },
+      {{/if_eq}}
+      {{#if_eq csspreprocessor 'stylus'}}
+        {
+          test: /\.css$/,
+          use: ['vue-style-loader', 'css-loader', 'stylus-loader']
+        },
+      {{/if_eq}}
+        {
+          test: /\.html$/,
+          use: 'vue-html-loader'
+        },
+        {
+          test: /\.js$/,
+          use: 'babel-loader',
+          include: [ path.resolve(__dirname, '../src/renderer') ],
+          exclude: /node_modules/
+        },
+        {
+          test: /\.vue$/,
+          use: {
+            loader: 'vue-loader',
+            options: {
+              extractCSS: true,
+              loaders: {
+                sass: 'vue-style-loader!css-loader!sass-loader?indentedSyntax=1',
+                scss: 'vue-style-loader!css-loader!sass-loader',
+                less: 'vue-style-loader!css-loader!less-loader',
+                styl: 'vue-style-loader!css-loader!stylus-loader'
+              }
+            }
+          }
+        },
+        {
+          test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+          use: {
+            loader: 'url-loader',
+            query: {
+              limit: 10000,
+              name: 'imgs/[name].[ext]'
+            }
+          }
+        },
+        {
+          test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+          use: {
+            loader: 'url-loader',
+            query: {
+              limit: 10000,
+              name: 'fonts/[name].[ext]'
             }
           }
         }
-      },
-      {
-        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-        use: {
-          loader: 'url-loader',
-          query: {
-            limit: 10000,
-            name: 'imgs/[name].[ext]'
-          }
-        }
-      },
-      {
-        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-        use: {
-          loader: 'url-loader',
-          query: {
-            limit: 10000,
-            name: 'fonts/[name].[ext]'
-          }
-        }
-      }
     ]
   },
   plugins: [
