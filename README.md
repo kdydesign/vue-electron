@@ -1,6 +1,8 @@
-forked from SimulatedGREG/electron-vue
-
 Babel 7, Electron 5, Vue 2.6
+
+- - - 
+forked from SimulatedGREG/electron-vue
+- - - 
 
 ### Getting Started
 
