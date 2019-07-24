@@ -1,4 +1,4 @@
-Babel 7, Electron 5, Vue 2.6
+Babel 7, Electron 5, Vue 2.6, Stylus
 
 - - - 
 forked from SimulatedGREG/electron-vue
