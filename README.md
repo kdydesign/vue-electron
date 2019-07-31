@@ -12,5 +12,5 @@ forked from SimulatedGREG/electron-vue
 npm install -g @vue/cli
 npm install -g @vue/cli-init
 
-vue init kdydesign/vue-electron my-project
+vue init kdydesign/vue-electron5 my-project
 ```
