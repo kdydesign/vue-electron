@@ -97,11 +97,15 @@ module.exports = {
     },
     framework: {
       type: 'list',
-      message: 'Select UI Framework',
+      message: 'Select UI framework package to install',
       choices: [
         {
           name: 'None',
           value: 'none'
+        },
+        {
+          name: 'Quasar',
+          value: 'quasar'
         },
         {
           name: 'Vuetify',
@@ -166,11 +170,7 @@ module.exports = {
   },
   helpers: {
     isEnabled (list, check, opts) {
-      if (list === 'vuetify') {
-        return opts.fn(this)
-      }
-
-      if (list[check]) {
+      if (list[check] || list === check) {
         return opts.fn(this)
       } else{
         return opts.inverse(this)
@@ -195,12 +195,19 @@ module.exports = {
 
       return output
     },
-    depsp (framework) {
-      if (framework !== 'none') {
-        return ', \n' +  `    "vuetify": "^2.0.4"`
+    depsf (framework) {
+      let output = ''
+
+      switch(framework) {
+        case 'vuetify' :
+          output = `, \n    "vuetify": "^2.0.4"`
+          break
+        case 'quasar' :
+          output = `, \n    "quasar": "^1.0.5"`
+          break
       }
 
-      return ''
+      return output
     },
     testing (unit, e2e, opts) {
       if (unit || e2e) {
