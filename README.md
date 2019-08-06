@@ -1,16 +1,14 @@
-Vue-CLI 3
-Babel 7, 
-Electron 5, 
-Vue 2.6, 
-
+- Electron 5, 
+- Vue-CLI 3
+- Babel 7, 
+- Vue 2.6, 
 - css-preprocessor
- - Sass,
- - Less,
- - Stylus 
-
+  - Sass,
+  - Less,
+  - Stylus 
 - UI Framework
- - Quasar 1.x
- - Vuetify 2.x
+  - Quasar 1.x
+  - Vuetify 2.x
 
 - - - 
 forked from SimulatedGREG/electron-vue
