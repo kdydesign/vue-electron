@@ -1,10 +1,10 @@
-- Electron 5, 
+- Electron 5
 - Vue-CLI 3
-- Babel 7, 
-- Vue 2.6, 
+- Babel 7
+- Vue 2.6
 - css-preprocessor
-  - Sass,
-  - Less,
+  - Sass
+  - Less
   - Stylus 
 - UI Framework
   - Quasar 1.x
