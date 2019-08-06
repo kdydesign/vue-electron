@@ -95,6 +95,20 @@ module.exports = {
       choices: ['axios', 'vue-electron', 'vue-router', 'vuex', 'vuex-electron'],
       default: ['axios', 'vue-electron', 'vue-router', 'vuex', 'vuex-electron']
     },
+    framework: {
+      type: 'list',
+      message: 'Select UI Framework',
+      choices: [
+        {
+          name: 'None',
+          value: 'none'
+        },
+        {
+          name: 'Vuetify',
+          value: 'vuetify'
+        }
+      ],
+    },
     eslint: {
       type: 'confirm',
       require: true,
@@ -152,8 +166,15 @@ module.exports = {
   },
   helpers: {
     isEnabled (list, check, opts) {
-      if (list[check]) return opts.fn(this)
-      else return opts.inverse(this)
+      if (list === 'vuetify') {
+        return opts.fn(this)
+      }
+
+      if (list[check]) {
+        return opts.fn(this)
+      } else{
+        return opts.inverse(this)
+      }
     },
     deps (plugins) {
       let output = ''
@@ -173,6 +194,13 @@ module.exports = {
       })
 
       return output
+    },
+    depsp (framework) {
+      if (framework !== 'none') {
+        return ', \n' +  `    "vuetify": "^2.0.4"`
+      }
+
+      return ''
     },
     testing (unit, e2e, opts) {
       if (unit || e2e) {
