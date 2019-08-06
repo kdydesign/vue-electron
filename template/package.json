@@ -41,43 +41,43 @@
     "postinstall": "{{#if eslint}}npm run lint:fix{{/if}}"
   },
   {{#if_eq builder 'builder'}}
-    "build": {
-      "productName": "{{ name }}",
-      "appId": "{{ appid }}",
-      "directories": {
-        "output": "build"
-      },
-      "files": [
-        "dist/electron/**/*"
-      ],
-      "dmg": {
-        "contents": [
-          {
-            "x": 410,
-            "y": 150,
-            "type": "link",
-            "path": "/Applications"
-          },
-          {
-            "x": 130,
-            "y": 150,
-            "type": "file"
-          }
-        ]
-      },
-      "mac": {
-        "icon": "build/icons/icon.icns"
-      },
-      "win": {
-        "icon": "build/icons/icon.ico"
-      },
-      "linux": {
-        "icon": "build/icons"
-      }
+  "build": {
+    "productName": "{{ name }}",
+    "appId": "{{ appid }}",
+    "directories": {
+      "output": "build"
     },
+    "files": [
+      "dist/electron/**/*"
+    ],
+    "dmg": {
+      "contents": [
+        {
+          "x": 410,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        },
+        {
+          "x": 130,
+          "y": 150,
+          "type": "file"
+        }
+      ]
+    },
+    "mac": {
+      "icon": "build/icons/icon.icns"
+    },
+    "win": {
+      "icon": "build/icons/icon.ico"
+    },
+    "linux": {
+      "icon": "build/icons"
+    }
+  },
   {{/if_eq}}
   "dependencies": {
-    "vue": "^2.6.10"{{deps plugins}}{{depsp framework}}
+    "vue": "^2.6.10"{{deps plugins}}{{depsf framework}}
   },
   "devDependencies": {
     "ajv": "^6.5.0",
@@ -86,6 +86,9 @@
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/plugin-transform-runtime": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
+    {{#if_eq framework 'quasar'}}
+    "@quasar/extras": "^1.2.0",
+    {{/if_eq}}
     "babel-loader": "^8.0.6",
     "babel-register": "^6.26.0",
     "babili-webpack-plugin": "^0.1.2",
