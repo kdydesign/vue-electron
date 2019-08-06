@@ -2,6 +2,18 @@
   <div>
     <div class="title">Information</div>
     <div class="items">
+{{#isEnabled framework 'vuetify'}}
+      <div class="item">
+        <div class="name">Vuetify:</div>
+        <div class="value">\{{ vuetify }}</div>
+      </div>
+{{/isEnabled}}
+{{#isEnabled framework 'quasar'}}
+      <div class="item">
+        <div class="name">Quasar:</div>
+        <div class="value">\{{ quasar }}</div>
+      </div>
+{{/isEnabled}}
 {{#isEnabled plugins 'vue-router'}}
       <div class="item">
         <div class="name">Path:</div>
@@ -37,6 +49,12 @@
     data () {
       return {
         electron: process.versions.electron,
+        {{#isEnabled framework 'vuetify'}}
+        vuetify: require('vuetify/package.json').version,
+        {{/isEnabled}}
+        {{#isEnabled framework 'quasar'}}
+        quasar: require('quasar/package.json').version,
+        {{/isEnabled}}
         {{#isEnabled plugins 'vue-router'}}
         name: this.$route.name,
         {{/isEnabled}}
