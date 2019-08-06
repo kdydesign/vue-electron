@@ -10,6 +10,12 @@ import router from './router'
 {{#isEnabled plugins 'vuex'}}
 import store from './store'
 {{/isEnabled}}
+{{#isEnabled framework 'vuetify'}}
+import Vuetify from 'vuetify'
+import 'vuetify/dist/vuetify.min.css'
+
+Vue.use(Vuetify)
+{{/isEnabled}}
 
 {{#isEnabled plugins 'vue-electron'}}
 if (!process.env.IS_WEB) Vue.use(require('vue-electron'))
