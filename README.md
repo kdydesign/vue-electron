@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://circleci.com/gh/kdydesign/vue-electron5/tree/master"><img src="https://circleci.com/gh/kdydesign/vue-electron5/tree/master.svg" alt="Build Status"></a>
-</p>
+  <a href="https://circleci.com/gh/kdydesign/vue-electron5/tree/master"><img src="https://circleci.com/gh/kdydesign/vue-electron5/tree/master.svg?style=shield" alt="Build Status"></a>
+  </p>
 
 - Electron 5
 - Vue-CLI 3
