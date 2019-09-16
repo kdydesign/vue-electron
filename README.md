@@ -1,9 +1,6 @@
-
-<!-- Badge -->
-<img src="https://circleci.com/gh/:https://github.com/kdydesign/:vue-electron5.png?circle-token=:9e06255e3638dcd3bf799c8debd8698c00ac401a">
- 
-<!-- Shield -->
-<img src="https://circleci.com/gh/:https://github.com/kdydesign/:vue-electron5.svg?style=shield&circle-token=:9e06255e3638dcd3bf799c8debd8698c00ac401a">
+<p align="center">
+  <a href="https://circleci.com/gh/kdydesign/vue-electron5/tree/master"><img src="https://circleci.com/gh/kdydesign/vue-electron5/tree/master.svg" alt="Build Status"></a>
+</p>
 
 - Electron 5
 - Vue-CLI 3
