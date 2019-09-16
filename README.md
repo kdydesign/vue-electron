@@ -1,6 +1,6 @@
 # vue-electron5
 <p align="center">
-  <a href="https://circleci.com/gh/vuejs/vue/tree/dev"><img src="https://img.shields.io/circleci/project/github/kdydesign/vue-electron5/master.svg" alt="Build Status"></a>
+  <a href="https://circleci.com/gh/kdydesign/vue-electron5/tree/master"><img src="https://img.shields.io/circleci/project/github/kdydesign/vue-electron5/master.svg" alt="Build Status"></a>
   </p>
 
 - Electron 5
