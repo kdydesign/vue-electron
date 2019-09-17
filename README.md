@@ -1,4 +1,4 @@
-# vue-electron5
+# vue-electron5 Boilerplate
 <p align="center">
   <a href="https://circleci.com/gh/kdydesign/vue-electron5/tree/master"><img src="https://img.shields.io/circleci/project/github/kdydesign/vue-electron5/master.svg" alt="Build Status"></a>
   <a href="#"><img src="https://img.shields.io/github/license/kdydesign/vue-electron5" alt="License"></a>
