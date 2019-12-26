@@ -181,8 +181,8 @@ module.exports = {
       let dependencies = {
         'axios': '^0.19.0',
         'vue-electron': '^1.0.6',
-        'vue-router': '^3.0.1',
-        'vuex': '^3.1.1',
+        'vue-router': '^3.1.3',
+        'vuex': '^3.1.2',
         'vuex-electron': '^1.0.3'
       }
 
@@ -200,10 +200,10 @@ module.exports = {
 
       switch(framework) {
         case 'vuetify' :
-          output = `, \n    "vuetify": "^2.0.4"`
+          output = `, \n    "vuetify": "^2.1.15"`
           break
         case 'quasar' :
-          output = `, \n    "quasar": "^1.0.5"`
+          output = `, \n    "quasar": "^1.5.11"`
           break
       }
 
