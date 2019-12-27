@@ -1,11 +1,11 @@
 {
-  "name": "vue-electron5",
-  "version": "1.0.0",
+  "name": "vue-electron",
+  "version": "1.1.0",
   "description": "An Electron & Vue.js quick start boilerplate with vue-cli support",
   "main": "meta.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kdydesign/vue-electron5.git"
+    "url": "git+https://github.com/kdydesign/vue-electron.git"
   },
   "keywords": [
     "electron",
@@ -20,9 +20,9 @@
   "author": "kdydesign@gmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kdydesign/vue-electron5/issues"
+    "url": "https://github.com/kdydesign/vue-electron/issues"
   },
-  "homepage": "https://github.com/kdydesign/vue-electron5#readme",
+  "homepage": "https://github.com/kdydesign/vue-electron#readme",
   "devDependencies": {
     "suppose": "^0.6.1"
   }
