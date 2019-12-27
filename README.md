@@ -1,10 +1,10 @@
-# vue-electron5 Boilerplate
+# vue-electron Boilerplate
 <p align="center">
-  <a href="https://circleci.com/gh/kdydesign/vue-electron5/tree/master"><img src="https://img.shields.io/circleci/project/github/kdydesign/vue-electron5/master.svg" alt="Build Status"></a>
+  <a href="https://circleci.com/gh/kdydesign/vue-electron/tree/master"><img src="https://img.shields.io/circleci/project/github/kdydesign/vue-electron/master.svg" alt="Build Status"></a>
   <a href="#"><img src="https://img.shields.io/github/license/kdydesign/vue-electron5" alt="License"></a>
   </p>
 
-- Electron 5
+- Electron 7
 - Vue-CLI 3
 - Babel 7
 - Vue 2.6
