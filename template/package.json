@@ -6,7 +6,7 @@
   "version": "{{ appver }}",
   "author": "{{ author }}",
   "description": "{{ description }}",
-  "license": null,
+  "license": "MIT",
   "main": "./dist/electron/main.js",
   "scripts": {
     {{#if_eq builder 'packager'}}

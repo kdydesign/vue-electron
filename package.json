@@ -3,9 +3,17 @@
   "version": "1.1.0",
   "description": "An Electron & Vue.js quick start boilerplate with vue-cli support",
   "main": "meta.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kdydesign/vue-electron.git"
+  "homepage": "https://github.com/kdydesign/vue-electron#readme",
+  "repository": "https://github.com/kdydesign/vue-electron",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kdydesign/vue-electron/issues",
+    "email": "kdydesign@gmail.com"
+  },
+  "scripts": {
+    "lint": "eslint meta.js",
+    "test": "yarn lint && jest",
+    "release": "yarn test && standard-version && git push --follow-tags && npm publish"
   },
   "keywords": [
     "electron",
@@ -15,15 +23,33 @@
     "reload",
     "router",
     "vuex",
-    "resource"
+    "resource",
+    "quasar",
+    "vuetify"
   ],
-  "author": "kdydesign@gmail.com",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/kdydesign/vue-electron/issues"
-  },
-  "homepage": "https://github.com/kdydesign/vue-electron#readme",
+  "contributors": [
+    {
+      "name": "Dev.DY <kdydesign@gmail.com>"
+    }
+  ],
   "devDependencies": {
-    "suppose": "^0.6.1"
+    "@babel/core": "latest",
+    "@babel/preset-env": "latest",
+    "@commitlint/cli": "latest",
+    "@commitlint/config-conventional": "latest",
+    "babel-eslint": "latest",
+    "babel-jest": "latest",
+    "codecov": "latest",
+    "eslint": "latest",
+    "eslint-config-standard": "latest",
+    "eslint-plugin-import": "latest",
+    "eslint-plugin-jest": "latest",
+    "eslint-plugin-node": "latest",
+    "eslint-plugin-promise": "latest",
+    "eslint-plugin-standard": "latest",
+    "eslint-plugin-vue": "latest",
+    "husky": "latest",
+    "jest": "latest",
+    "standard-version": "latest"
   }
 }
