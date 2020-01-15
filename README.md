@@ -1,4 +1,5 @@
 # ⚡️ Vue-Electron Boilerplate
+![Version][version-src]
 [![Circle CI][circle-ci-src]][circle-ci-href]
 [![Codecov][codecov-src]][codecov-href]
 [![Dependencies][david-dm-src]][david-dm-href]
@@ -58,6 +59,7 @@ vue-electron keeps core dependency modules up to date.
 Copyright (c) [Dev.DY](https://kdydesign.github.io/)
 
 <!-- Badges -->
+[version-src]: https://img.shields.io/github/package-json/v/kdydesign/vue-electron?style=flat-square
 [circle-ci-src]: https://img.shields.io/circleci/project/github/kdydesign/vue-electron/master.svg?style=flat-square
 [circle-ci-href]: https://circleci.com/gh/kdydesign/vue-electron/tree/master
 [codecov-src]: https://img.shields.io/codecov/c/github/kdydesign/vue-electron.svg?style=flat-square
