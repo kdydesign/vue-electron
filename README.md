@@ -27,7 +27,7 @@ $ npm run dev
 ## About Main Modules
 vue-electron keeps core dependency modules up to date.
 
-### Core
+### ❤️ Core
 
 | Module   | Version          |
 |----------|------------------|
@@ -36,7 +36,7 @@ vue-electron keeps core dependency modules up to date.
 | Vue      | 2.x              |
 | Babel    | 7.x              |
 
-### CSS-Preprocessor
+### 🔱 CSS-Preprocessor
 
 | Module | Version          |
 |--------|------------------|
@@ -44,7 +44,7 @@ vue-electron keeps core dependency modules up to date.
 | Less   | 3.x              |
 | Stylus | 0.54.x           |
 
-### Framework
+### ⭐️ Framework
 
 | Module | Version          |
 |--------|------------------|
