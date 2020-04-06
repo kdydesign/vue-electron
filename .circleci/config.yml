@@ -31,8 +31,3 @@ jobs:
 
       # run tests!
       - run: npm run test
-
-      # Coverage
-      - run:
-          name: Coverage
-          command: npm run codecov
