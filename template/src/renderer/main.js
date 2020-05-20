@@ -32,7 +32,7 @@ import '@quasar/extras/animate/fadeOut.css'
 Vue.use(Quasar, {
   config: {
     framework: 'all'
-  },
+  }
 })
 {{/isEnabled}}
 
