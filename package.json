@@ -51,5 +51,8 @@
     "husky": "latest",
     "jest": "latest",
     "standard-version": "latest"
+  },
+  "engines": {
+    "node": ">= 12"
   }
 }
