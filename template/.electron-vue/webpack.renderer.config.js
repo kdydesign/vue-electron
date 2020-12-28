@@ -19,7 +19,7 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin')
  * that provide pure *.vue files that need compiling
  * https://simulatedgreg.gitbooks.io/electron-vue/content/en/webpack-configurations.html#white-listing-externals
  */
-let whiteListedModules = ['vue', 'quasar']
+let whiteListedModules = [ 'vue'{{#if_eq framework 'quasar'}}, 'quasar'{{/if_eq}}{{#if_eq framework 'vuetify'}}, 'vuetify'{{/if_eq}} ]
 
 let rendererConfig = {
   devtool: 'source-map',
