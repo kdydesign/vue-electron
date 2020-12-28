@@ -5,21 +5,21 @@
  *  environment.
  */
 
-/* eslint-disable */
+const { app } = require('electron')
 
 // Install `electron-debug` with `devtron`
 require('electron-debug')({ showDevTools: true })
 
 // Install `vue-devtools`
-require('electron').app.on('ready', async () => {
-  await require('devtron').install()
+app.whenReady().then(() => {
+  require('devtron').install()
 
-  let installExtension = require('electron-devtools-installer')
+  const installExtension = require('electron-devtools-installer')
   installExtension.default(installExtension.VUEJS_DEVTOOLS)
-      .then(() => {})
-      .catch(err => {
-        console.log('Unable to install `vue-devtools`: \n', err)
-      })
+    .then(() => {})
+    .catch(err => {
+      console.log('Unable to install `vue-devtools`: \n', err)
+    })
 })
 
 // Require `main` process to boot app

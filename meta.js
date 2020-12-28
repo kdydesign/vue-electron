@@ -166,10 +166,10 @@ module.exports = {
     deps (plugins) {
       let output = ''
       const dependencies = {
-        axios: '^0.19.2',
+        axios: '^0.21.1',
         'vue-electron': '^1.0.6',
-        'vue-router': '^3.2.0',
-        vuex: '^3.4.0',
+        'vue-router': '^3.4.9',
+        vuex: '^3.6.0',
         'vuex-electron': '^1.0.3'
       }
 
@@ -187,10 +187,10 @@ module.exports = {
 
       switch (framework) {
         case 'vuetify':
-          output = ', \n    "vuetify": "^2.2.29"'
+          output = ', \n    "vuetify": "^2.4.0"'
           break
         case 'quasar':
-          output = ', \n    "quasar": "^1.11.3"'
+          output = ', \n    "quasar": "^1.14.7"'
           break
       }
 
