@@ -30,7 +30,7 @@ vue-electron keeps core dependency modules up to date.
 
 | Module   | Version          |
 |----------|------------------|
-| **Electron** | **11.x**              |
+| **Electron** | **11.x** ![new][new-src]        |
 | Vue-CLI  | 3.x              |
 | Vue      | 2.x              |
 | Babel    | 7.x              |
@@ -68,3 +68,4 @@ Copyright (c) [Dev.DY](https://kdydesign.github.io/)
 [standard-js-src]: https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square
 [standard-js-href]: https://standardjs.com
 [license-src]: https://img.shields.io/github/license/kdydesign/vue-electron?style=flat-square
+[new-src]: https://img.shields.io/badge/-new-blue?style=flat-square
