@@ -30,7 +30,7 @@ vue-electron keeps core dependency modules up to date.
 
 | Module   | Version          |
 |----------|------------------|
-| **Electron** | **9.x**              |
+| **Electron** | **11.x**              |
 | Vue-CLI  | 3.x              |
 | Vue      | 2.x              |
 | Babel    | 7.x              |
@@ -39,16 +39,16 @@ vue-electron keeps core dependency modules up to date.
 
 | Module | Version          |
 |--------|------------------|
-| Sass   | 4.x              |
-| Less   | 3.x              |
+| Sass   | 5.x              |
+| Less   | 4.x              |
 | Stylus | 0.54.x           |
 
 ### ⭐️ Framework
 
 | Module | Version          |
 |--------|------------------|
-| Quasar | 1.11.x            |
-| vuetify| 2.2.x            |
+| Quasar | 1.14.x            |
+| vuetify| 2.4.x            |
 
 
 ## License
