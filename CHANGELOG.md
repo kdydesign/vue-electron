@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.4](https://github.com/kdydesign/vue-electron/compare/v1.1.2...v1.1.4) (2020-12-29)
+
+
+### Bug Fixes
+
+* electron store app error ([4d771e6](https://github.com/kdydesign/vue-electron/commit/4d771e69b654fa7d5bdb3e033dda02afa97fc5ab))
+* eslint airbnb fixed ([0ca2bbc](https://github.com/kdydesign/vue-electron/commit/0ca2bbc42033989daf580a1e3f430f6be7be30db))
+* eslint airbnb fixed ([1098a3a](https://github.com/kdydesign/vue-electron/commit/1098a3a53d0170c1dffd69707b3dfda393722b8a))
+* fixed electron-packager platform build error ([4e862c7](https://github.com/kdydesign/vue-electron/commit/4e862c7aae6b08912d7189dab870a78e60f160e3))
+* vuetify Multiple instance ([592fdb2](https://github.com/kdydesign/vue-electron/commit/592fdb2e71b16444ca81194503a5ebcea241db63))
+
 ### [1.1.3](https://github.com/kdydesign/vue-electron/compare/v1.1.2...v1.1.3) (2020-05-20)
 
 #### ❤️ Modular Upgrade
