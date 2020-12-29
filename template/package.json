@@ -126,6 +126,7 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-import-resolver-webpack": "^0.13.0",
     "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-vue": "^7.4.0",
     {{/if_eq}}
     {{/eslint}}
     "mini-css-extract-plugin": "^1.3.3",
